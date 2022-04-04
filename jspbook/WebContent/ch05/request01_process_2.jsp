@@ -11,8 +11,12 @@
 		request.setCharacterEncoding("utf-8");
 		String userid = request.getParameter("id");
 		String password = request.getParameter("passwd");
+		
+		if(userid.equals("관리자") && password.equals("1234")){
+			response.sendRedirect("response01_success.jsp");
+		}else{
+			response.sendRedirect("response01_failed.jsp");
+		}
 	%>
-	<p> 아이디 : <%= userid %>
-	<p> 비밀번호 : <%= password %>
 </body>
 </html>
