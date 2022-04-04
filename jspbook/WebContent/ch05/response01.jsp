@@ -7,7 +7,7 @@
 <title>Implicite Objects</title>
 </head>
 <body>
-	<form action = "request01_process.jsp" method="post">
+	<form action = "response01_process.jsp" method="post">
 	<fieldset>
 		<legend>로그인</legend>
 			<p> 아 이 디	&nbsp;:	<input type="text" name="id">
