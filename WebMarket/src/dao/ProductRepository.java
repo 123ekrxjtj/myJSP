@@ -14,18 +14,26 @@ public class ProductRepository {
 		phone.setUnitsInStock(1000);
 		phone.setCondition("new");
 		
-		Product notebook = new Product("P1234", "iPhone 6s", 800000);
-		notebook.setDescription("4.7-inch, 1334x750 Renina HD display, 8-megapixel iSight Camera");
-		notebook.setCategory("Smart Phone");
-		notebook.setManufacturer("Apple");
+		Product notebook = new Product("P1235", "LG PC Gram", 1500000);
+		notebook.setDescription("13.3 inch, IPS LED Display, 5rd Generation Intel Core processores, 8-megapixel iSight Camera");
+		notebook.setCategory("Notebook");
+		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
-		notebook.setCondition("new");
+		notebook.setCondition("Refurbished");
 		
-		Product tablet = new Product("P1234", "iPhone 6s", 800000);
-		tablet.setDescription("4.7-inch, 1334x750 Renina HD display, 8-megapixel iSight Camera");
-		tablet.setCategory("Smart Phone");
-		tablet.setManufacturer("Apple");
+		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
+		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display, Octa Core processor");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
-		tablet.setCondition("new");
+		tablet.setCondition("Old");
+		
+		listOfProducts.add(phone);
+		listOfProducts.add(notebook);
+		listOfProducts.add(tablet);
+	}
+	
+	public ArrayList<Product> getAllProducts(){
+		return listOfProducts;
 	}
 }
