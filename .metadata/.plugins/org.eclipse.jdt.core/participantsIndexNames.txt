@@ -9,3 +9,5 @@ D:\new\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\947735151.index
 \jspbook\src
 D:\new\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\236571353.index
 \jspbook\src
+D:\new\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1933366359.index
+\Exercise\src
