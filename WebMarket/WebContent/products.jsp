@@ -2,13 +2,12 @@
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
 <%@ page import = "dao.ProductRepository" %>
-<jsp:useBean id = "productDAO" class="dao.ProductRepository" scope = "session"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>상품 목록</title>
-	<link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href = "./resources/css/bootstrap.min.css" />
 </head>
 <body>
 	<jsp:include page="menu.jsp"/>
@@ -30,6 +29,8 @@
 					Product product = listOfProducts.get(i);
 			%>
 			<div class = "col-md-4">
+				<img src="./resources/images/<%=product.getFilename()%>"
+				style = "width : 100%">
 				<h3><%= product.getPname() %></h3>
 				<p><%= product.getDescription() %></p>
 				<p><%= product.getUnitPrice() %>원</p>

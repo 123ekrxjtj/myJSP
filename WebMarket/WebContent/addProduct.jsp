@@ -1,9 +1,9 @@
-<@ page contentType = "text/html"; charset=UTF-8 %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
     <script type="text/javascript" src="./resources/js/validation.js"></script>
-    <title>상품 등록</title>
+    <title>상품 등록</title>
 </head>
 <body>
     <jsp:include page="menu.jsp" />
@@ -14,7 +14,7 @@
     </div>
     <div class="container">
         <form name="newProduct" action="./processAddProduct.jsp"
-        class="form-horizontal" method="post">
+        class="form-horizontal" method="post" enctype="multipart/form-data">
             <div class="form-group row">
                 <label class="col-sm-2">상품 코드</label>
                 <div class="col-sm-3">
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">상품 명</label>
+                <label class="col-sm-2">상품명</label>
                 <div class="col-sm-3">
                     <input type="text" id="name" name="name"
                     class="form-control">
@@ -51,14 +51,14 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">분류</label>
+                <label class="col-sm-2">분류</label>
                 <div class="col-sm-3">
                     <input type="text" name="category"
                     class="form-control">
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2">재고 수</label>
+                <label class="col-sm-2">재고 수</label>
                 <div class="col-sm-3">
                     <input type="text" id="unitsInStock" name="unitsInStock"
                     class="form-control">
@@ -67,15 +67,21 @@
             <div class="form-group row">
                 <label class="col-sm-2">상태</label>
                 <div class="col-sm-5">
-                    <input type="radio" name="condition" value="New "> 신규 제품
-                    <input type="radio" name="condition" value="Old "> 중고 제품
-                    <input type="radio" name="condition" value="Refurbished "> 재생 제품
+                    <input type="radio" name="condition" value="New "> 신규 상품
+                    <input type="radio" name="condition" value="Old "> 중고 제품
+                    <input type="radio" name="condition" value="Refurbished "> 재생 제품
                 </div>
+            </div>
+            <div class = "form-group row">
+            	<label class="col-sm-2">이미지</label>
+            	<div class = "col-sm-5">
+            		<input type="file" name="productImage" class="form-control">
+            	</div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="button" class="btn btn-primary" value=
-                    "등록" onclick="CheckAddProduct()">
+                    "등록" onclick="CheckAddProduct()">
                 </div>
             </div>
         </form>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-		<request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 	%>
 
 	<p> 아이디 : <%=request.getParameter("id")%>
